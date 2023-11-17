@@ -1,0 +1,28 @@
+(*
+ * Escribe un programa que muestre por consola (con un print) los
+ * números de 1 a 100 (ambos incluidos y con un salto de línea entre
+ * cada impresión), sustituyendo los siguientes:
+ * - Múltiplos de 3 por la palabra "fizz".
+ * - Múltiplos de 5 por la palabra "buzz".
+ * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
+ *)
+
+program fizzbuzz_pr1;
+
+   var i,mult3, mult5 : integer;
+
+   const n=100;
+
+begin
+
+  for i:=1 to n do
+  begin
+
+    if (i MOD 3=0) then writeln(' fizz')
+    else if i MOD 5=0 then writeln(' buzz')
+    else if (i MOD 3=0) AND (i mod 5=0) then writeln(' fizzbuzz')
+    else writeln('   ',i);
+  end;
+  readln;
+end.
+
